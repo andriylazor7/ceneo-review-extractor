@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Author</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/author_page_style.css') }}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+        <ul class="nav-list">
+          <li><a href="{{ url_for('home') }}">Home Page</a></li>
+          <li><a href="{{ url_for('start_extraction') }}">Extraction of Opinions</a></li>
+          <li><a href="{{ url_for('product_page') }}">List of Product Reviews</a></li>
+          <li><a href="{{ url_for('author_page') }}">About the Author</a></li>
+        </ul>
+    </div>
+  </nav>
+  
+  <div class="author-page-container">
+    <p>I am Andrii Lazor</p>
+    <p>Student ID: <b>236327</b></p>
+    <p>Git Hub repository: <a href="https://github.com/andriylazor7/ceneo-review-extractor.git" target="_blank">Repo</a></p>
+  </div>
+  
+</body>
+</html>

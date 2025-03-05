@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home_page_style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="{{ url_for('home') }}">Home Page</a></li>
+                <li><a href="{{ url_for('start_extraction') }}">Extraction of Opinions</a></li>
+                <li><a href="{{ url_for('product_page') }}">List of Product Reviews</a></li>
+                <li><a href="{{ url_for('author_page') }}">About the Author</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+      <div class="home-page-container">
+        <h1>Welcome to Ceneo Review Extracter</h1>
+        <p>The application extracts product reviews from the Ceneo.pl website using product codes, displaying the reviews along with basic statistics.</p>
+        <p>The application allows users to extract product reviews from Ceneo.pl by entering a product code. It collects details like the opinion ID, author, rating, content, pros and cons, helpful votes, and dates. Missing information is left blank. The app then displays the reviews along with statistics like average ratings and review distribution, and generates charts to visualize the data for easy analysis.</p>
+      </div>
+    </main>
+</body>
+</html>

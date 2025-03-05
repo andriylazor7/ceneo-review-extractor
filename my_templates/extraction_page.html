@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Extraction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/extraction_page_style.css') }}">
+</head>
+<script>
+    setTimeout(function() {
+        let errorMessage = document.querySelector('.error-message')
+        if (errorMessage) {
+            errorMessage.style.display = "none";
+        }
+    }, 3000);
+</script>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="{{ url_for('home') }}">Home Page</a></li>
+                <li><a href="{{ url_for('start_extraction') }}">Extraction of Opinions</a></li>
+                <li><a href="{{ url_for('product_page') }}">List of Product Reviews</a></li>
+                <li><a href="{{ url_for('author_page') }}">About the Author</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <h1>Extraction Page</h1>
+
+    {% if error %}
+        <p class="error-message" style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <div class="form-container">
+        <form action="/extract" method="POST">
+            <label for="product_id">Enter Product ID</label><br>
+            <input type="text" id="product_id" name="product_id"><br>
+            <button type="submit">Start Extraction</button>
+        </form>   
+    </div>
+    
+</body>
+</html>
